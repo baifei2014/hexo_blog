@@ -4,12 +4,12 @@
 
 # Site
 title: Hexo
-subtitle:
+subtitle: malloc(me), 分配些时间与空间
 description:
 keywords:
 author: 叉腰的Jerry
 language:
-timezone:
+timezone: PRC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -90,3 +90,16 @@ theme: hexo-theme-aircloud
 deploy:
   type: git
   repo:
+# 友情链接
+friends: [
+    {
+        title: "爱阅技术团队博客",
+        href: "https://www.likecho.com"
+    },{
+        title: "爱阅社区",
+        href: "https://aiyue.likecho.com"
+    },{
+        title: "Self.Page",
+        href: "#"
+    }
+]
