@@ -1,7 +1,7 @@
 ---
 title: Laravel中外观模式的使用
-tags: blog
-date: 2019-06-05 15:32:45
+tags: [PHP, Laravel, Facade]
+date: 2019-04-02 15:32:45
 ---
 Laravel是一款非常流行的PHP开发框架，简洁，优雅。Laravel使用到了很多的新特性，并且在框架爱中大量使用设计模式。今天介绍下Laravel中使用到的外观（门面）模式。
 

@@ -7,16 +7,21 @@ title: Hexo
 subtitle:
 description:
 keywords:
-author: John Doe
+author: 叉腰的Jerry
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.likecho.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
+avatar_style:
+  radius: true
+
+sidebar-avatar: img/avatar.jpeg
 
 # Directory
 source_dir: source
@@ -35,7 +40,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -63,7 +68,7 @@ tag_map:
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
-time_format: HH:mm:ss
+time_format: HH:mm
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -73,7 +78,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-bubuzou
+# theme: hexo-theme-bubuzou
+theme: hexo-theme-aircloud
 # theme: Hacker
 # theme: aircloud 
 # theme: Fan 
