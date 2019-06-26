@@ -1,0 +1,8 @@
+User-agent: * Allow: /
+Allow: /archives/
+Disallow: /vendors/
+Disallow: /categories/
+
+
+Sitemap: http://blog.likecho.com/sitemap.xml
+Sitemap: http://blog.likecho.com/baidusitemap.xml

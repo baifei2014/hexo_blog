@@ -3,13 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 叉腰的Jerry
 subtitle: malloc(me), 分配些时间与空间
-description:
-keywords:
+description: 博客，分享些技术和生活
+keywords: 博客
 author: 叉腰的Jerry
 language:
 timezone: PRC
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -103,3 +107,4 @@ friends: [
         href: "#"
     }
 ]
+SEOTitle: 叉腰的Jerry
