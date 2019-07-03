@@ -34,12 +34,6 @@
                     <span><%= __('nav.about') %></span>
                 </a>
             </li>
-            <li <% if(is_current('contract')){ %> <%- "class=active" %> <% } %>>
-                <a href="<%= config.root %><%- 'about/' %>">
-                    <i class="iconfont icon-guanyu2"></i>
-                    <span><%= __('nav.about') %></span>
-                </a>
-            </li>
             <%if(config.search && config.search.path){%>
             <li>
                 <a id="search">

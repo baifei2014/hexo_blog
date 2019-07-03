@@ -103,3 +103,22 @@ friends: [
     }
 ]
 SEOTitle: 叉腰的Jerry
+menu:
+  Home: /
+  Archives: /archives
+  Books: /books     #This is your books page
+  Movies: /movies   #This is your movies page
+  Games: /games   #This is your games page
+douban:
+  user: 162680419
+  builtin: true
+  book:
+    title: 'This is my book title'
+    quote: 'This is my book quote'
+  movie:
+    title: 'This is my movie title'
+    quote: 'This is my movie quote'
+  game:
+    title: 'This is my game title'
+    quote: 'This is my game quote'
+  timeout: 10000 
