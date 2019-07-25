@@ -160,8 +160,10 @@ int main(int argc, char **argv) {
     aeDeleteEventLoop(server.el);
     return 0;
 }
+```
 
 程序首先调用aeCreateEventLoop函数创建事件循环容器，做一些初始化工作。然后调用aeCreateFileEvent函数创建文件描述符事件，在这里，注册了文件描述符，关注的事件，还绑定了具体事件处理器。aeCreateFileEvent函数如下：
+
 ```c
 int aeCreateFileEvent(aeEventLoop *eventLoop, int fd, int mask,
         aeFileProc *proc, void *clientData)
