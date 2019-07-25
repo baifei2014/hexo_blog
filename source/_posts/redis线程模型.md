@@ -37,6 +37,7 @@ select系统调用的原型如下：
 #include <sys/select.h>
 int select(int nfds, fd_set* readfds, fd_set* writefds, fd_set* exceptfds, struct timeval* timeout);
 ```
+
 - nfds参数指定了被监听的文件描述符的总数。
 - readfds，writefds，exceptfds参数分别指向可读，可写和异常等事件对应的文件描述符集合。应用程序通过参数传入感兴趣的文件描述符，调用返回时，内核将修改它们来通知应用程序哪些文件描述符已经就绪。
 - timeout用来设置函数调用超时时间。
@@ -51,6 +52,7 @@ epoll是Linux特有的IO多路复用机制，实现上和select有很大不同�
 #include <sys/epoll.h>
 int epoll_create(int size);
 ```
+
 size参数其实并不起作用，只是提示作用。函数返回的文件描述符将用作其他所有的epoll系统调用的第一个参数，以指定要访问的内核事件表。
 
 epoll_ctl函数用来操作内核事件表，原型如下：
@@ -58,6 +60,7 @@ epoll_ctl函数用来操作内核事件表，原型如下：
 #include <sys/epoll.h>
 int epoll_ctl(int epfd, int op, int fd, struct epoll_event* event);
 ```
+
 fd是要操作的文件描述符，即epoll_create的返回值，op参数指定了操作类型，类型有如下三种：
 - EPOLL_CTL_ADD，往事件表中注册fd上的事件。
 - EPOLL_CTL_MOD，修改fd上注册的事件。
@@ -72,6 +75,7 @@ epoll_wait函数在一段超时时间内等待一组文件描述符上的事件�
 #include <sys/epoll.h>
 int epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout);
 ```
+
 该函数成功时返回就绪的文件描述符个数，失败时返回-1并设置errno。timeout参数指定超时的时间，当为-1时，将永远阻塞，直到某个文件描述符就绪，当timeout为0时，将立即返回。maxevents指定最多监听多少事件，必须大于0。epoll_wait函数如果检测到epfd对应的事件，就会将所有就绪的事件从内核事件表复制到第二个参数events指向的数组中。这个数组只输出epoll_wait检测到的就绪事件，相对select既用于传入注册事件，又用于输出内核检测到的事件，极大提高了索引就绪文件描述符的效率。
 
 ## ae事件库源码分析
@@ -114,6 +118,7 @@ typedef struct aeEventLoop {
     aeBeforeSleepProc *aftersleep;
 } aeEventLoop;
 ```
+
 这个数据结构存储了存储了程序注册的所有文件描述符，以及事件信息，在ae事件库中，我们基本上是在操作这个数据结构。events是注册的所有的文件描述，fired存储的是就绪的文件描述符，下面来看下它们的结构：
 
 ```c
@@ -133,6 +138,7 @@ typedef struct aeFiredEvent {
     int mask;
 } aeFiredEvent;
 ```
+
 aeFileEvent是注册的文件描述符对应的信息，包含关注的事件，以及绑定的事件处理器。但是在这个结构里没办法知道事件是否触发。aeFiredEvent结构体存储的是就绪事件，包含事件类型和文件描述符，怎么使用在后面讲。
 
 #### 使用示例
@@ -177,6 +183,7 @@ int aeCreateFileEvent(aeEventLoop *eventLoop, int fd, int mask,
     return AE_OK;
 }
 ```
+
 代码里aeApiAddEvent函数，是不同的IO机制的添加事件的封装。
 
 注册完事件，然后就调用aeMain函数开始事件循环。代码如下：
@@ -190,6 +197,7 @@ void aeMain(aeEventLoop *eventLoop) {
     }
 }
 ```
+
 在事件循环里，调用多路复用api函数，返回就绪的事件，如果有就绪的事件，那就执行对应的读写操作，实现代码如下：
 ```c
 int aeProcessEvents(aeEventLoop *eventLoop, int flags)
