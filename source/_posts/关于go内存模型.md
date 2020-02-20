@@ -1,6 +1,5 @@
 ---
 title: 关于go内存模型
-tags: blog
 date: 2020-02-18 21:16:07
 tags: [golang, 内存模型, goroutine]
 ---
@@ -117,6 +116,34 @@ func main() {
 
 如果channel是有缓冲的 (e.g., c = make(chan int, 1)) ，那么程序就不会保证输出“hello, world”
 
+### Locks
+
+sync包里实现了两种锁类型，分别是 `sync.Mutex` 和 `sync.RWMutex`。
+
+对于 `sync.Mutex` 或 `sync.RWMutex` 类型的变量l来说，如果 `n<m` ，第n次调用l.Unlock()一定发生在第m次调用l.Lock()返回之前。
+
+下面这个程序：
+
+```go
+var l sync.Mutex
+var a string
+
+func f() {
+	a = "hello, world"
+	l.Unlock()
+}
+
+func main() {
+	l.Lock()
+	go f()
+	l.Lock()
+	print(a)
+}
+```
+
+保证会输出“hello, world”，因为第一次调用l.Unlock()发生在第二次调用l.Lock()返回之前。
+
+对于 `sync.RLock` 或 `sync.RWMutex` 类型的变量l，第n次调用 `l.RLock` 发生在第n次调用 `l.Unlock` 之后，并且 `l.RUnlock` 发生在第n+1次调用 `l.Lock` 之前。
 
 
 
