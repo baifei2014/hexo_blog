@@ -278,6 +278,9 @@ php-fpm运行流程图如下：
 若阅读过redis源码，可能会看出与php-fpm调用IO复用函数有些区别。在redis中，master进程会监听服务端socket连接是否有可读可写事件，如果有，那就调用accept()接受连接请求。但是在php-fpm中，不同于redis处理逻辑，每个子进程是先调用accept()阻塞等待，有连接之后，然后调用poll()监听可读就绪事件。
 
 
+## 其它
 
+我这里创建了一个项目，是在阅读php-fpm源码时测试多进程还有socket用的，还都是php-fpm源码，删除了大量其它内容相关的代码，简化保留多进程，socket相关信息，感兴趣或想动手实践的话可以参考使用。
 
+[mock_php-fpm](https://github.com/baifei2014/mock_php-fpm "mock_php-fpm")
 
