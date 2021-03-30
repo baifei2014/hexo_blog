@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Java使用LinkedHashMap实现LRU字典
 tags: [Java, LRU]
 date: 2019-03-12 15:32:45

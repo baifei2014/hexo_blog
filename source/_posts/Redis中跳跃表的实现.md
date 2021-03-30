@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Redis中跳跃表的实现
 tags: [Redis, skipList, C]
 date: 2019-06-19 11:56:05

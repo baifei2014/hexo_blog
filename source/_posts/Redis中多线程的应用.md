@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Redis中多线程的应用
 tags: [Redis, 多线程]
 date: 2019-12-30 22:28:57

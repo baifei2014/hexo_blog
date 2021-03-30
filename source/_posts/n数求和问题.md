@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: n数求和问题
 date: 2019-07-19 17:54:13
 tags: [数组, 双指针]

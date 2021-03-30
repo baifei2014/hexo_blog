@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: 探秘php-fpm源码实现(一)
 date: 2020-04-22 21:06:50
 tags: [php, php-fpm, socket, 多进程, IO, 服务器编程]

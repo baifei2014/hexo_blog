@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Laravel中的错误处理的理解
 tags: [PHP, Laravel, ErrorHandler]
 date: 2019-04-25 15:32:45

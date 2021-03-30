@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Mysql binlog增量订阅的应用
 tags: [mysql, binlog, kafka]
 date: 2019-11-18 00:16:17

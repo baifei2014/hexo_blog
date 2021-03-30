@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: redis线程模型
 date: 2019-07-23 20:30:57
 tags: [redis, epoll, select]

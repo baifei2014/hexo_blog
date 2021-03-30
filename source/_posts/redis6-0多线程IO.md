@@ -1,4 +1,5 @@
 ---
+layout: post
 title: redis6.0多线程IO
 tags: [redis, 多线程, IO]
 date: 2020-05-29 21:52:51

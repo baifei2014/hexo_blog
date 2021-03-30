@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 关于go内存模型
 date: 2020-02-18 21:16:07
 tags: [golang, 内存模型, goroutine]

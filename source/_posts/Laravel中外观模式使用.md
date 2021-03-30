@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Laravel中外观模式的使用
 tags: [PHP, Laravel, Facade]
 date: 2019-04-02 15:32:45

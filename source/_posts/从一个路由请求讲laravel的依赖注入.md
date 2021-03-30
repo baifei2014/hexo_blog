@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 从一个路由请求讲laravel的依赖注入
 tags: [PHP, Laravel, 依赖注入]
 date: 2019-06-04 12:52:18

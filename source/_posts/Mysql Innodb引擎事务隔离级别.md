@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Mysql Innodb引擎事务隔离级别
 tags: [MySQL, Innodb, 隔离级别]
 date: 2019-03-18 15:32:45

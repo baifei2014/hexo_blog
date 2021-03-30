@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 跨平台flutter框架与go构建音乐聊天应用
 tags: [跨平台, flutter, dart, golang, app]
 date: 2020-03-07 16:18:36

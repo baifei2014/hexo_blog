@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: MySQL中InnoDB存储引擎锁的介绍
 date: 2019-06-24 20:15:48
 tags: [MySQL, InnoDB, LOCK]

@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: B树
 date: 2019-07-12 18:27:53
 tags: [B-树, B+树]

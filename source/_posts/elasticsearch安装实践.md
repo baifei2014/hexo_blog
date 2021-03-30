@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Elasticsearch安装实践
 tags: [Elasticsearch, java]
 date: 2019-09-05 12:43:47
