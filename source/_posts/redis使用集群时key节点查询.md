@@ -2,7 +2,7 @@
 layout: post
 title: redis使用集群时key节点查询
 tags: [redis, cluster, hashslot]
-date: 2021-03-29 16:15:33
+date: 2021-03-29 21:15:33
 ---
 
 ### 引言
