@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 叉腰的Jerry
+title: 龙豪的博客
 subtitle: malloc(me), 分配些时间与空间
 description: 博客，分享些技术和生活
-keywords: 博客
-author: 叉腰的Jerry
+keywords: "后端,c,golang,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,中间件"
+author: 龙豪的博客
 language:
 timezone: PRC
 sitemap:
@@ -82,7 +82,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia 
+theme: hexo-theme-aircloud 
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -97,28 +97,12 @@ friends: [
     },{
         title: "爱阅社区",
         href: "http://aiyue.likecho.com"
-    },{
-        title: "Self.Page",
-        href: "#"
     }
 ]
-SEOTitle: 叉腰的Jerry
+SEOTitle: 龙豪的博客
 menu:
   Home: /
   Archives: /archives
   Books: /books     #This is your books page
   Movies: /movies   #This is your movies page
   Games: /games   #This is your games page
-douban:
-  user: 162680419
-  builtin: true
-  book:
-    title: 'This is my book title'
-    quote: 'This is my book quote'
-  movie:
-    title: 'This is my movie title'
-    quote: 'This is my movie quote'
-  game:
-    title: 'This is my game title'
-    quote: 'This is my game quote'
-  timeout: 10000 
